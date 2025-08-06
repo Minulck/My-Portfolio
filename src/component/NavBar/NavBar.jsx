@@ -72,7 +72,7 @@ const NavBar = () => {
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-[#8245ec] transition-colors"
             >
-              <FaGithub />
+              <FaGithub size={30}/>
             </a>
             <a
                 href=""
@@ -80,7 +80,7 @@ const NavBar = () => {
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-[#8245ec] transition-colors"
             >
-              <FaLinkedin />
+              <FaLinkedin size={30} />
             </a>
           </div>
 
@@ -114,7 +114,7 @@ const NavBar = () => {
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  <FaGithub />
+                  <FaGithub size={15} />
                 </a>
                 <a
                   href=""
@@ -122,7 +122,7 @@ const NavBar = () => {
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  <FaLinkedin />
+                  <FaLinkedin size={15} />
                 </a>
               </div>
             </ul>

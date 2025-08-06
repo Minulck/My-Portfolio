@@ -5,6 +5,7 @@ html,body{
     margin: 0;
     padding: 0;
     font-family: "Space Grotesk", sans-serif;
+    
 }
 
 @layer utilities {
@@ -32,4 +33,22 @@ html,body{
     .animate-loading-bar {
     animation: loading 0.8s ease infinite;
 }
+
+    @keyframes blob {
+        0% {
+            transform: translate(-50%, -50%) scale(1);
+        }
+        33% {
+            transform: translate(-50%, -50%) scale(1.2);
+        }
+        66% {
+            transform: translate(-50%, -50%) scale(0.8);
+        }
+        100% {
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+    .animate-blob {
+        animation: blob 10s infinite;
+    }
 }
