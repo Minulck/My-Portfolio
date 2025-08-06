@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import './App.css'
+import LoadingScreen from './component/LoadingScreen'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [isLoading, setIsLoading] = useState(false)
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+      {!isLoading && <LoadingScreen onComplete={() => setIsLoading(true)} />}
     </>
   )
 }
