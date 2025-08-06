@@ -26,7 +26,8 @@ function App() {
 
             <div className='relative pt-20'>
               <NavBar />
-              <About />
+              <About />\
+              <Skills />
             </div>
 
         </div>
