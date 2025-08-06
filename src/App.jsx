@@ -18,7 +18,7 @@ function App() {
   return (
     <>
       {!isLoading && <LoadingScreen onComplete={() => setIsLoading(true)} />}
-        <div className={`transition-opacity duration-700 ${isLoading ? 'opacity-100' : 'opacity-0'} bg-[#050414] `}>
+        <div className={`transition-opacity duration-1000 ${isLoading ? 'opacity-100' : 'opacity-50'} bg-[#050414] `}>
 
             <BlurBlob position={{ top: '35%', left: '20%' }} size={{ width: '30%', height: '40%' }} />
 
@@ -26,8 +26,8 @@ function App() {
 
             <div className='relative pt-20'>
               <NavBar />
-              <About />\
-              <Skills />
+              <About />
+              <Education />
             </div>
 
         </div>
