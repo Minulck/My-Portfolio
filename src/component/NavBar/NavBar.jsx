@@ -34,14 +34,14 @@ const NavBar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] lg:px-[20vw] ${
+      className={`fixed top-0 w-full z-50 transition duration-300 px-4 sm:px-6 md:px-[7vw] lg:px-[20vw] ${
         isScrolled
           ? "bg-[#050414] bg-opacity-50 backdrop-blur-md shadow-md"
           : "bg-transparent"
       }`}
     >
-      <div className="text-white py-5 flex justify-between items-center">
-        <div className="text-lg font-semibold cursor-pointer">
+      <div className="text-white py-4 sm:py-5 flex justify-between items-center">
+        <div className="text-base sm:text-lg font-semibold cursor-pointer">
           <span className="text-[#8245ec]">&lt;</span>
           <span className="text-white">Minul</span>
           <span className="text-[#8245ec]">/</span>
@@ -85,36 +85,36 @@ const NavBar = () => {
           </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        <div className="md:hidden z-50">
           {isMenuOpen ? (
-            <FiX className="text-3xl text-[#8245ec] cursor-pointer" 
+            <FiX className="text-2xl sm:text-3xl text-[#8245ec] cursor-pointer" 
             onClick={() => setIsMenuOpen(false)}/>
           ) : (
-            <FiMenu className="text-3xl text-[#8245ec] cursor-pointer" 
+            <FiMenu className="text-2xl sm:text-3xl text-[#8245ec] cursor-pointer" 
             onClick={() => setIsMenuOpen(true)}/>
           )}
         </div>
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[rgba(5,4,20,0.5)] bg-opacity-50 backdrop-blur-lg rounded-lg z-50 p-6 shadow-lg md:hidden">
-            <ul className="flex flex-col items-center space-y-4 text-gray-300">
+          <div className="absolute top-full left-0 right-0 w-full bg-[rgba(5,4,20,0.95)] backdrop-blur-lg shadow-lg md:hidden">
+            <ul className="flex flex-col items-center space-y-4 text-gray-300 p-6">
               {menuItems.map((item) => (
-                <li key={item.id} className={`cursor-pointer hover:text-white ${activeSection === item.id ? "text-[#8245ec] bg-[#050414]/60 rounded-lg px-20" : ""}`}>
-                  <button  className="w-full text-left"
+                <li key={item.id} className={`cursor-pointer hover:text-white w-full text-center py-2 ${activeSection === item.id ? "text-[#8245ec] bg-[#050414]/60 rounded-lg" : ""}`}>
+                  <button className="w-full py-2"
                   onClick={() => handleMenuItemClick(item.id)}>
                     {item.label}
                   </button>
                 </li>
               ))}
-              <div className="flex space-x-4">
+              <div className="flex space-x-6 pt-4">
                 <a
                   href=""
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  <FaGithub size={15} />
+                  <FaGithub size={20} />
                 </a>
                 <a
                   href=""
@@ -122,7 +122,7 @@ const NavBar = () => {
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  <FaLinkedin size={15} />
+                  <FaLinkedin size={20} />
                 </a>
               </div>
             </ul>
