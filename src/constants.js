@@ -24,6 +24,9 @@ import figmaLogo from './assets/tech_logo/figma.png';
 import netlifyLogo from './assets/tech_logo/netlify.png';
 import vercelLogo from './assets/tech_logo/vercel.png';
 import postgreLogo from './assets/tech_logo/postgre.png';
+import mahindaLogo from './assets/education_logo/Mahinda_scl.png';
+import dharmalokaLogo from './assets/education_logo/Dharmaloka_scl.png';
+import uomLogo from './assets/education_logo/UOM.png';
 
 // Experience Section Logo's
 
@@ -143,39 +146,30 @@ export const SkillsInfo = [
   export const education = [
     {
       id: 0,
-      img: gitLogo,
-      school: "GLA University, Mathura",
-      date: "Sept 2022 - July 2024",
-      grade: "7.81 CGPA",
-      desc: "I have completed my Master's degree (MCA) in Computer Applications from GLA University, Mathura. During my time at GLA, I gained a strong foundation in programming, software development, and computer science principles. I have studied courses such as Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Web Development, and Software Engineering. I actively participated in various workshops and technical events, which enhanced my skills and knowledge. My experience at GLA University has been instrumental in shaping my technical abilities and professional growth.",
-      degree: "Master of Computer Applications - MCA",
+      img: mahindaLogo,
+      school: "Mahinda Maha Vidyalaya, Heiyanthuduwa",
+      date: "2007 - 2017",
+      grade: "A-7 B-1 S-1",
+      desc: " I completed my Ordinary Level (O/L) education at Mahinda Maha Vidyalaya, Heiyanthuduwa, where I studied a diverse range of subjects. My O/L results reflect my dedication and hard work, achieving grades that demonstrate my understanding and proficiency in the subjects. This foundational education has equipped me with essential skills and knowledge for my future academic pursuits.",
+      degree: "Ordinary Level (O/L)",
     },
     {
       id: 1,
-         img: gitLogo,
-      school: "BSA College, Mathura",
-      date: "Sept 2018 - Aug 2021",
-      grade: "73.2%",
-      desc: "I completed my Bachelor's degree in Computer Science (B.Sc.) from BSA College, Mathura. Throughout my studies, I was immersed in a variety of subjects that deepened my understanding of computing and technology. From exploring Data Structures and Algorithms to diving into Web Development and Database Management Systems, I gained practical insights into the world of software development. My time at BSA College allowed me to work on projects that applied theoretical concepts to real-world problems.",
-      degree: "Bachelor of Science - BSC (Computer Science)",
+      img: dharmalokaLogo,
+      school: "Sri Dharmaloka College, Kelaniya",
+      date: "2018 - 2020",
+      grade: "A A B",
+      desc: " I completed my Advanced Level (A/L) education at Sri Dharmaloka College, Kelaniya, where I specialized in Mathematics, Physics, and Chemistry. This program provided me with a solid foundation in scientific principles and analytical thinking. I excelled in my subjects, achieving high grades that reflect my dedication and understanding of the material. My A/L education has equipped me with the skills necessary for further studies in engineering and technology.",
+      degree: "A/L in Mathematics, Physics, and Chemistry",
     },
     {
       id: 2,
-        img: gitLogo,
-      school: "Vatsalya Public School Govardhan, Mathura",
-      date: "Apr 2017 - March 2018",
-      grade: "78%",
-      desc: "I completed my class 12 education from Vatsalya Public School, Govardhan, under the CBSE board, where I studied Physics, Chemistry, and Mathematics (PCM) with Computer Science.",
-      degree: "CBSE(XII) - PCM with Computer Science",
-    },
-    {
-        id: 3,
-         img: gitLogo,
-      school: "Vatsalya Public School Govardhan, Mathura",
-      date: "Apr 2015 - March 2016",
-      grade: "87.5%",
-      desc: "I completed my class 10 education from Vatsalya Public School, Govardhan, under the CBSE board, where I studied Science with Computer.",
-      degree: "CBSE(X), Science with Computer Application",
+      img: uomLogo,
+      school: "University of Moratuwa, Sri Lanka",
+      date: "2023 - Present",
+      grade: "3.91 CGPA",
+      desc : "Currently following BSC Honors in Information Technology at University of Moratuwa, Sri Lanka. The program is designed to provide a comprehensive understanding of information technology, including software development, data management, and system design. Through a combination of theoretical knowledge and practical experience, I am developing the skills necessary to excel in the IT industry.",
+      degree: "Bsc. (Hons) in Information Technology",
     },
   ];
   

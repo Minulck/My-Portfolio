@@ -4,7 +4,7 @@ const Education = () => {
   return (
     <section
       id="education"
-      className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[16vw] bg-[#050414] "
+      className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[16vw] bg-skills-gradient clip-path-custom-3"
     >
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold text-white">My Education</h2>
@@ -22,13 +22,13 @@ const Education = () => {
           <div
             key={edu.id}
             className={`flex flex-col sm:flex-row items-center mb-16 ${
-              index % 2 === 0 ? "sm:justify-end" : "sm:justify-start"
+              index % 2 === 0 ? "sm:justify-start" : "sm:justify-end"
             } `}
           >
             <div className="absolute sm:left-1/2 left-0 transform -translate-x-1/2 bg-gray-400 border-4 border-[#8245ec] w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center z-10">
               <img
-                src={edu.img || ""}
-                alt={edu.degree}
+                src={edu.img}
+                alt={edu.school}
                 className="w-full h-full object-cover rounded-full"
               />
             </div>
@@ -39,11 +39,11 @@ const Education = () => {
               } sm:ml-44 sm:mr-44 ml-8 transform transition-transform duration-500 hover:scale-105`}
             >
               <div className="flex items-center space-x-6">
-                <div className="w-16 h-16 bg-white rounded-md overflow-hidden">
+                <div className="w-16 h-16 bg-white rounded-md overflow-hidden flex-shrink-0">
                   <img
                     className="w-full h-full object-cover"
-                    src={edu.img || ""}
-                    alt={edu.degree}
+                    src={edu.img}
+                    alt={edu.school}
                   />
                 </div>
 
@@ -53,13 +53,18 @@ const Education = () => {
                       {edu.degree}
                     </h3>
                     <h4 className="text-md sm:text-sm text-gray-300">
-                      {edu.institution}
+                      {edu.school}
                     </h4>
                   </div>
+
                   <p className="text-sm text-gray-500 mt-2">{edu.date}</p>
+                
                 </div>
               </div>
-                <p className="text-gray-400 mt-4">{edu.desc}</p>
+                <p className="text-purple-500 mt-4">{edu.grade}</p>
+                <p className="mt-4 text-gray-400">
+                  {edu.desc}
+                </p>
             </div>
           </div>
         ))}
