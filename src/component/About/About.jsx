@@ -51,7 +51,13 @@ const About = () => {
                 </div>
                 
                 <div className="md:w-1/2 flex justify-center md:justify-end ">
-                   <Tilt className='w-64 w-48 sm:h-54 md:w-[30rem] md:h-[30rem] border-4 border-purple-700 rounded-full'>
+                   <Tilt className='w-64 w-48 sm:h-54 md:w-[30rem] md:h-[30rem] border-4 border-purple-700 rounded-full'
+                        tiltMaxAngleX={20}
+                        tiltMaxAngleY={20}
+                        perspective={1000}
+                        transitionSpeed={1000}
+                        scale={1.05}
+                        gyroscope={true}>
                      <img
                     src={profileImage}
                     alt="Profile"
