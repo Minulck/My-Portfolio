@@ -36,6 +36,33 @@ import uomLogo from './assets/education_logo/UOM.png';
 
 // Project Section Logo's
 
+export const TechLogo=[
+  {name: 'HTML', logo: htmlLogo},
+  {name: 'CSS', logo: cssLogo},
+  {name: 'JavaScript', logo: javascriptLogo},
+  {name: 'React JS', logo: reactjsLogo},
+  {name: 'Angular', logo: angularLogo},
+  {name: 'Tailwind CSS', logo: tailwindcssLogo},
+  {name: 'Material UI', logo: materialuiLogo},
+  {name: 'Bootstrap', logo: bootstrapLogo},
+  {name: 'Springboot', logo: springbootLogo},
+  {name: 'Node JS', logo: nodejsLogo},
+  {name: 'Express JS', logo: expressjsLogo},
+  {name: 'MySQL', logo: mysqlLogo},
+  {name: 'MongoDB', logo: mongodbLogo},
+  {name: 'Firebase', logo: firebaseLogo},
+  {name: 'PostgreSQL', logo: postgreLogo},
+  {name: 'C', logo: cLogo},
+  {name: 'Java', logo: javaLogo},
+  {name: 'Python', logo: pythonLogo},
+  {name: 'Git', logo: gitLogo},
+  {name: 'GitHub', logo: githubLogo},
+  {name: 'VS Code', logo: vscodeLogo},
+  {name: 'Postman', logo: postmanLogo},
+  {name: 'Figma', logo: figmaLogo},
+  {name: 'Netlify', logo: netlifyLogo},
+  {name: 'Vercel', logo: vercelLogo},
+]
 
 
 export const SkillsInfo = [

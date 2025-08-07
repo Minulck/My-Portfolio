@@ -1,11 +1,12 @@
-import { SkillsInfo } from "../../constants";
+import { SkillsInfo, TechLogo } from "../../constants";
 import Tilt from "react-parallax-tilt";
 
 const Skills = () => {
   return (
     <section
       id="skills"
-      className="py-24 pb-34 px-[12vw] md:px-[7vw] lg:px-[20vw] bg-skills-gradient clip-path-custom ">
+      className="py-24 pb-34 px-[12vw] md:px-[7vw] lg:px-[20vw] bg-skills-gradient clip-path-custom "
+    >
       <div className="text-center mb-8">
         <h2 className="text-3xl sm:text-4xl font-bold text-white">My Skills</h2>
         <div className="w-24 h-1 bg-[#8245ec] mx-auto mt-2"></div>
@@ -54,6 +55,36 @@ const Skills = () => {
             </div>
           </Tilt>
         ))}
+      </div>
+
+      <div className="mt-8">
+        <h4 className="text-xl font-semibold text-gray-400 mb-4 text-center">
+          Technologies & Tools
+        </h4>
+        <div className="slider">
+          <div className="list">
+            {/* First set of logos */}
+            {TechLogo.map((logo, index) => (
+              <div className="item" key={`first-${index}`}>
+                <img
+                  src={logo.logo}
+                  alt={logo.name}
+                  title={logo.name}
+                />
+              </div>
+            ))}
+            {/* Duplicate set for seamless loop */}
+            {TechLogo.map((logo, index) => (
+              <div className="item" key={`second-${index}`}>
+                <img
+                  src={logo.logo}
+                  alt={logo.name}
+                  title={logo.name}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
