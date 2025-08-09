@@ -205,8 +205,34 @@ html {
         }
     }
     .animate-blink {
-    animation: blink 0.8s step-end infinite;
-}
+        animation: blink 0.8s step-end infinite;
+    }
+
+    @keyframes pulse {
+        0%, 100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.6;
+        }
+    }
+    .animate-pulse {
+        animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    @keyframes gradient-x {
+        0%, 100% {
+            background-size: 200% 200%;
+            background-position: left center;
+        }
+        50% {
+            background-size: 200% 200%;
+            background-position: right center;
+        }
+    }
+    .animate-gradient-x {
+        animation: gradient-x 3s ease infinite;
+    }
 
     @keyframes loading{
         0%{
@@ -217,8 +243,8 @@ html {
         }
     }
     .animate-loading-bar {
-    animation: loading 0.8s ease infinite;
-}
+        animation: loading 0.6s ease infinite;
+    }
 
     @keyframes blob {
         0% {

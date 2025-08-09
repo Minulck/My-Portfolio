@@ -28,7 +28,6 @@ const Skills = () => {
             perspective={1000}
             transitionSpeed={1000}
             scale={1.05}
-            gyroscope={true}
           >
             <h3 className="text-2xl sm:text-3xl font-semibold text-gray-400 mb-4 text-center">
               {category.title}

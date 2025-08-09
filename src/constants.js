@@ -27,6 +27,8 @@ import postgreLogo from './assets/tech_logo/postgre.png';
 import mahindaLogo from './assets/education_logo/Mahinda_scl.png';
 import dharmalokaLogo from './assets/education_logo/Dharmaloka_scl.png';
 import uomLogo from './assets/education_logo/UOM.png';
+import ballerinaLogo from "./assets/tech_logo/Ballerina.png"
+import choreoLogo from './assets/tech_logo/choreo.png'
 
 // Experience Section Logo's
 
@@ -37,6 +39,7 @@ import uomLogo from './assets/education_logo/UOM.png';
 // Project Section Logo's
 
 export const TechLogo=[
+  {name: 'Ballerina', logo: ballerinaLogo},
   {name: 'HTML', logo: htmlLogo},
   {name: 'CSS', logo: cssLogo},
   {name: 'JavaScript', logo: javascriptLogo},
@@ -82,6 +85,7 @@ export const SkillsInfo = [
   {
     title: 'Backend',
     skills: [
+      { name: 'Ballerina', logo: ballerinaLogo },
       { name: 'Springboot', logo: springbootLogo },
       { name: 'Node JS', logo: nodejsLogo },
       { name: 'Express JS', logo: expressjsLogo },
@@ -89,6 +93,7 @@ export const SkillsInfo = [
       { name: 'MongoDB', logo: mongodbLogo },
       { name: 'Firebase', logo: firebaseLogo },
       { name: 'PostgreSQL', logo: postgreLogo },
+
     ],
   },
   {
@@ -110,6 +115,7 @@ export const SkillsInfo = [
       { name: 'Vercel', logo: vercelLogo },
       { name: 'Netlify', logo: netlifyLogo },
       { name: 'Figma', logo: figmaLogo },
+      { name: 'Choreo', logo: choreoLogo },
     ],
   },
 ];

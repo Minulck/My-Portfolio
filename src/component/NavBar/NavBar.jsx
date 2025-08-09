@@ -109,7 +109,7 @@ const NavBar = () => {
               ))}
               <div className="flex space-x-6 pt-4">
                 <a
-                  href=""
+                  href="https://github.com/Minulck"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-white transition-colors"
@@ -117,7 +117,7 @@ const NavBar = () => {
                   <FaGithub size={20} />
                 </a>
                 <a
-                  href=""
+                  href="https://www.linkedin.com/in/minul-chathumal-b2784725b/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-white transition-colors"
