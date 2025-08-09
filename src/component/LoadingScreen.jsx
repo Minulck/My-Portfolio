@@ -3,7 +3,7 @@ import {useEffect, useState} from 'react';
 const LoadingScreen = ({onComplete}) => {
 
     const [text, setText] = useState("");
-    const fullText = " <Welcome to Minul.dev /> ";
+    const fullText = " < MinulCK /> ";
 
     useEffect(() => {
         let index=0;
