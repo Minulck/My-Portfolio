@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import LoadingScreen from './component/LoadingScreen'
 import NavBar from './component/NavBar/NavBar'
@@ -13,12 +13,29 @@ import BlurBlob from './BlurBlob'
 
 function App() {
   const [count, setCount] = useState(0)
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoaded, setIsLoaded] = useState(false) // Changed from isLoading to isLoaded for clarity
+
+  // Fix scroll position on page refresh
+  useEffect(() => {
+    // Scroll to top on mount
+    window.scrollTo(0, 0);
+    
+    // Also handle browser back/forward navigation
+    const handleBeforeUnload = () => {
+      window.scrollTo(0, 0);
+    };
+    
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, []);
 
   return (
     <>
-      {!isLoading && <LoadingScreen onComplete={() => setIsLoading(true)} />}
-        <div className={`transition-opacity duration-1000 ${isLoading ? 'opacity-100' : 'opacity-50'} bg-[#050414] `}>
+      {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
+        <div className={`transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'} bg-[#050414] `}>
 
             <BlurBlob position={{ top: '35%', left: '20%' }} size={{ width: '30%', height: '40%' }} />
 
