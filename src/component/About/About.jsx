@@ -230,7 +230,7 @@ const About = () => {
     }, []);
 
     return (
-        <section id="about" className="px-[5vw] md:px-[7vw] lg:px-[10vw] font-sans mt-16 md:mt-24 lg:mt-12 mb-32">
+        <section id="about" className="px-[5vw] md:px-[7vw] lg:px-[10vw] font-sans mt-16 md:mt-24 lg:mt-22 mb-32">
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 min-h-[70vh]">
                 
                 {/* Left Section - Enhanced Terminal */}
@@ -244,10 +244,7 @@ const About = () => {
                                 <div className="w-3 h-3 bg-green-500 rounded-full shadow-sm hover:bg-green-400 transition-colors cursor-pointer"></div>
                             </div>
                             <div className="flex items-center gap-2 ml-4">
-                                <span className="text-gray-400 text-sm font-mono">📁</span>
                                 <span className="text-gray-300 text-sm font-mono">About.jsx</span>
-                                <span className="text-gray-500 text-xs">•</span>
-                                <span className="text-green-400 text-xs">●</span>
                             </div>
                             <div className="ml-auto text-xs text-gray-500 font-mono">
                                 Node.js
@@ -283,11 +280,11 @@ const About = () => {
                                 {/* Terminal output simulation */}
                                 {isTypingComplete && (
                                     <div className="mt-4 pt-4 border-t border-gray-700">
-                                        <div className="text-green-400 text-xs mb-2">✨ Object created successfully!</div>
+                                        <div className="text-green-400 text-xs mb-2">Object created successfully!</div>
                                         <div className="text-gray-500 text-xs">
                                             <span className="text-blue-400">developer</span>
                                             <span className="text-white"> {'=>'} </span>
-                                            <span className="text-green-400">Ready for action! 🚀</span>
+                                            <span className="text-green-400">Ready for action! </span>
                                         </div>
                                     </div>
                                 )}
@@ -308,9 +305,9 @@ const About = () => {
                                 tiltMaxAngleY={12}
                                 perspective={1200}
                                 transitionSpeed={800}
-                                scale={1.08}
+                                scale={1.05}
                                 glareEnable={true}
-                                glareMaxOpacity={0.3}
+                                glareMaxOpacity={0}
                                 glareColor="#8245ec"
                                 glarePosition="all"
                             >
