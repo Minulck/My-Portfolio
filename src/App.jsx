@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import './App.css'
+import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer } from 'react-toastify'
 import LoadingScreen from './component/LoadingScreen'
 import NavBar from './component/NavBar/NavBar'
 import About from './component/About/About'
@@ -64,6 +66,28 @@ function App() {
             </div>
 
         </div>
+      
+      {/* Global ToastContainer - appears above everything */}
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+        style={{ zIndex: 10000 }}
+        toastStyle={{
+          backgroundColor: '#1a1a2e',
+          color: '#ffffff',
+          border: '1px solid #8245ec',
+          borderRadius: '8px',
+          fontFamily: 'Space Grotesk, sans-serif'
+        }}
+      />
     </>
   )
 }

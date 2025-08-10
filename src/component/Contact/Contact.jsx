@@ -5,8 +5,7 @@ import {
   FaFacebookMessenger,
 } from "react-icons/fa";
 import {useRef, useState} from 'react'
-import {toast,ToastContainer} from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
+import {toast} from 'react-toastify'
 import emailJs from '@emailjs/browser'
 
 
@@ -25,7 +24,6 @@ const Contact = () => {
     
     if (!serviceId || !templateId || !publicKey) {
       toast.error("EmailJS configuration is missing. Please check environment variables.", {
-        position: "top-left",
         autoClose: 5000,
         closeOnClick: true,
         theme: "dark"
@@ -39,7 +37,6 @@ const Contact = () => {
       .then(() => {
           form.current.reset();
           toast.success("Message sent successfully!", {
-            position: "top-left",
             autoClose: 3000,
             closeOnClick: true,
             theme: "dark"
@@ -49,7 +46,6 @@ const Contact = () => {
       }, (error) => {
           console.log(error.text);
           toast.error("Failed to send message.", {
-            position: "top-left",
             autoClose: 3000,
             closeOnClick: true,
             theme: "dark"
@@ -63,18 +59,6 @@ const Contact = () => {
       id="contact"
       className="flex flex-col items-center justify-center py-16 px-[12vw] md:px-[17vw] lg:px-[20vw] "
     >
-      <ToastContainer
-        position="top-left"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-      />
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold text-white">Contact Me</h2>
         <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
@@ -127,7 +111,7 @@ const Contact = () => {
               className="w-full p-4 rounded-lg bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300" 
               type="text" 
               placeholder="Your Full Name"
-              required 
+              required
             />
 
             <input 
@@ -135,7 +119,7 @@ const Contact = () => {
               className="w-full p-4 rounded-lg bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300" 
               type="email" 
               placeholder="Your Email Address"
-              required 
+              required
             />
 
             <input 
@@ -143,7 +127,7 @@ const Contact = () => {
               className="w-full p-4 rounded-lg bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300" 
               type="text"
               placeholder="Subject"
-              required 
+              required
             />
 
             <textarea 
