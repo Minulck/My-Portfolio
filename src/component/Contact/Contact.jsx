@@ -18,7 +18,7 @@ const Contact = () => {
     e.preventDefault();
     setIsSent(true);
 
-    emailJs.sendForm('service_bdmch9c', 'template_m41zaba', form.current, 'AmZJux4o5cxrrJKSS')
+    emailJs.sendForm(VITE.EMAILJS.SERVICE_ID, VITE.EMAILJS.TEMPLATE_ID, form.current, 'AmZJux4o5cxrrJKSS')
       .then(() => {
           form.current.reset();
           toast.success("Message sent successfully!", {

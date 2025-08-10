@@ -511,19 +511,19 @@ It was a pleasure working with him, and I’m confident he will continue to achi
 `,
   },
 
-    {
-    name: "Mr. Shayan Malinda",
-    pos: "Senior Software Engineer",
-    company: "WSO2",
-    profilePic: shayanPic,
-    linkedinUrl: "https://www.linkedin.com/in/shayanmalinda/?originalSubdomain=lk",
-    feedback:`
-I had the pleasure of mentoring Minul during his undergraduate project. He showed great leadership, guided his team well, and kept everyone motivated. He demonstrated adaptability by learning a new language to meet project needs. He was committed and consistently delivered high-quality work on time.
+//     {
+//     name: "Mr. Shayan Malinda",
+//     pos: "Senior Software Engineer",
+//     company: "WSO2",
+//     profilePic: shayanPic,
+//     linkedinUrl: "https://www.linkedin.com/in/shayanmalinda/?originalSubdomain=lk",
+//     feedback:`
+// I had the pleasure of mentoring Minul during his undergraduate project. He showed great leadership, guided his team well, and kept everyone motivated. He demonstrated adaptability by learning a new language to meet project needs. He was committed and consistently delivered high-quality work on time.
 
-Minul’s communication skills were excellent clear, proactive, and collaborative. He handled challenges calmly and kept the project moving forward.
+// Minul’s communication skills were excellent clear, proactive, and collaborative. He handled challenges calmly and kept the project moving forward.
 
-It was a pleasure working with him, and I’m confident he will continue to achieve great things.
-`,
-  },
+// It was a pleasure working with him, and I’m confident he will continue to achieve great things.
+// `,
+//   },
 
 ];
