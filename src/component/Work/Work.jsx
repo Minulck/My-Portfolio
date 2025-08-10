@@ -42,28 +42,6 @@ const Work = () => {
     }
   };
 
-  // Add keyboard event listener for ESC key
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === "Escape" && selectedProject) {
-        handleCloseProject();
-      }
-    };
-
-    if (selectedProject) {
-      document.addEventListener("keydown", handleKeyDown);
-      // Prevent background scrolling when modal is open
-      document.body.style.overflow = "hidden";
-      document.body.classList.add("modal-open");
-    }
-
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-      document.body.style.overflow = "unset";
-      document.body.classList.remove("modal-open");
-    };
-  }, [selectedProject]);
-
 
 
   return (
