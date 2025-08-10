@@ -1,4 +1,4 @@
-/* Galaxy theme animations */
+/* Enhanced Galaxy theme animations */
 @keyframes float {
   0%, 100% {
     transform: translateY(0px);
@@ -10,13 +10,16 @@
 
 @keyframes galaxyFloat {
   0%, 100% {
-    transform: translateY(0px) rotate(0deg);
+    transform: translateY(0px) rotate(0deg) scale(1);
   }
-  33% {
-    transform: translateY(-15px) rotate(120deg);
+  25% {
+    transform: translateY(-20px) rotate(90deg) scale(1.1);
   }
-  66% {
-    transform: translateY(10px) rotate(240deg);
+  50% {
+    transform: translateY(-10px) rotate(180deg) scale(0.9);
+  }
+  75% {
+    transform: translateY(-25px) rotate(270deg) scale(1.05);
   }
 }
 
@@ -39,6 +42,19 @@
   }
 }
 
+@keyframes starBright {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+    filter: brightness(1.5);
+  }
+}
+
 @keyframes shootingStar {
   0% {
     transform: translateX(-100px) translateY(-100px);
@@ -51,8 +67,43 @@
     opacity: 1;
   }
   100% {
-    transform: translateX(1000px) translateY(500px);
+    transform: translateX(1200px) translateY(600px);
     opacity: 0;
+  }
+}
+
+@keyframes constellationGlow {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes nebulaFlow {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.1;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+    opacity: 0.3;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 0.1;
+  }
+}
+
+@keyframes cosmicPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.3;
   }
 }
 
@@ -89,6 +140,37 @@
   }
 }
 
+/* Galaxy loading animations */
+@keyframes galaxyLoad {
+  0% {
+    transform: rotate(0deg) scale(0.8);
+    opacity: 0.3;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: rotate(360deg) scale(0.8);
+    opacity: 0.3;
+  }
+}
+
+@keyframes starFormation {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+}
+
 .floating-dot {
   animation: float 6s ease-in-out infinite;
 }
@@ -97,8 +179,20 @@
   animation: starTwinkle 4s ease-in-out infinite;
 }
 
+.star-bright {
+  animation: starBright 2s ease-in-out infinite;
+}
+
+.galaxy-nebula {
+  animation: nebulaFlow 30s linear infinite;
+}
+
 .shooting-star {
   animation: shootingStar 8s linear infinite;
+}
+
+.constellation-line {
+  animation: constellationGlow 6s ease-in-out infinite;
 }
 
 .fade-in-up {
@@ -111,6 +205,14 @@
 
 .slide-in-right {
   animation: slideInRight 0.8s ease-out forwards;
+}
+
+.galaxy-loading {
+  animation: galaxyLoad 3s ease-in-out infinite;
+}
+
+.star-formation {
+  animation: starFormation 2s ease-in-out infinite;
 }
 
 /* Smooth scroll behavior */
