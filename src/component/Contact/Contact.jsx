@@ -22,7 +22,7 @@ const Contact = () => {
       .then((result) => {
           form.current.reset();
           toast.success("Message sent successfully!", {
-            position: toast.POSITION.TOP_CENTER,
+            position: "top-left",
             autoClose: 3000,
             closeOnClick: true,
             theme: "dark"
@@ -31,13 +31,13 @@ const Contact = () => {
           setTimeout(() => setIsSent(false), 3000);
       }, (error) => {
           console.log(error.text);
-          setIsSent(false);
           toast.error("Failed to send message.", {
-            position: toast.POSITION.TOP_CENTER,
+            position: "top-left",
             autoClose: 3000,
             closeOnClick: true,
             theme: "dark"
           });
+          setIsSent(false);
       });
   };
 
@@ -46,7 +46,18 @@ const Contact = () => {
       id="contact"
       className="flex flex-col items-center justify-center py-4 px-[12vw] md:px-[17vw] lg:px-[20vw]"
     >
-      <ToastContainer />
+      <ToastContainer
+        position="top-left"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold text-white">Contact Me</h2>
         <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
@@ -128,7 +139,7 @@ const Contact = () => {
 
             <button 
               type="submit" 
-              disabled={isSent}
+              disabled={isSent ? true : false}
               className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold py-4 px-6 rounded-lg hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98]"
             >
               {isSent ? 'Message Sent!' : 'Send Message'}
