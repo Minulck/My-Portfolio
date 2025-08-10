@@ -24,6 +24,7 @@ import figmaLogo from "./assets/tech_logo/figma.png";
 import netlifyLogo from "./assets/tech_logo/netlify.png";
 import vercelLogo from "./assets/tech_logo/vercel.png";
 import postgreLogo from "./assets/tech_logo/postgre.png";
+import ballerinaLogo from "./assets/tech_logo/Ballerina.png";
 
 // Education Section Logo's
 import mahindaLogo from "./assets/education_logo/Mahinda_scl.png";
@@ -332,6 +333,7 @@ export const TechLogo = [
   { name: "Figma", logo: figmaLogo },
   { name: "Netlify", logo: netlifyLogo },
   { name: "Vercel", logo: vercelLogo },
+  { name: "Ballerina", logo: ballerinaLogo },
 ];
 
 export const SkillsInfo = [
@@ -351,6 +353,7 @@ export const SkillsInfo = [
   {
     title: "Backend",
     skills: [
+      { name: "Ballerina", logo: ballerinaLogo },
       { name: "Springboot", logo: springbootLogo },
       { name: "Node JS", logo: nodejsLogo },
       { name: "Express JS", logo: expressjsLogo },
@@ -412,7 +415,6 @@ export const education = [
     degree: "Bsc. (Hons) in Information Technology",
   },
 ];
-
 export const projects = [
   {
     id: 0,
@@ -469,6 +471,20 @@ export const projects = [
   },
   {
     id: 4,
+    title: "Portfolio",
+    description:"A modern, responsive portfolio website built with React and Vite, showcasing my professional journey, skills, and projects. Features a sleek dark theme with smooth animations and interactive elements.",
+    image: portfolio,
+    tags: [
+      "HTML",
+      "Tailwind CSS",
+      "JavaScript",
+      "React JS",
+    ],
+    github: "https://github.com/Minulck/My-Portfolio",
+    webapp: "https://resourcehub-fivestackdev.vercel.app/",
+  },
+  {
+    id: 5,
     title: "Ceylon-Coffee",
     description:
       "A productivity-boosting Chrome extension designed to help users manage and remember their daily tasks. Built using JavaScript, it offers a simple interface with reminders and task notifications to keep users on track.",
