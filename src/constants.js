@@ -26,8 +26,127 @@ import vercelLogo from './assets/tech_logo/vercel.png';
 import postgreLogo from './assets/tech_logo/postgre.png';
 
 
-// Experience Section Logo's
+import dilanPic from './assets/Testmonials/dilan.jpeg';
 
+// Experience Section Logo's
+// Using existing logos as placeholders - you can add specific organization logos later
+
+export const experienceOrganizations = [
+  {
+    id: 0,
+    name: "IEEE Student Branch",
+    logo: uomLogo,
+    type: "Professional Organization",
+    duration: "2023 - Present",
+    description: "Institute of Electrical and Electronics Engineers - University of Moratuwa Student Branch",
+    positions: [
+      {
+        id: 0,
+        title: "Vice Chairman",
+        duration: "2024 - Present",
+        description: "Led strategic initiatives and coordinated with executive committee members to organize technical workshops, seminars, and networking events. Supervised project teams and mentored junior members in professional development activities.",
+        achievements: [
+          "Organized 5+ technical workshops with 200+ participants",
+          "Increased student branch membership by 40%",
+          "Led team of 15+ committee members",
+          "Coordinated with industry professionals for guest lectures"
+        ]
+      },
+      {
+        id: 1,
+        title: "Secretary",
+        duration: "2023 - 2024",
+        description: "Managed official documentation, meeting minutes, and communication between members. Coordinated event logistics and maintained records of all branch activities and member participation.",
+        achievements: [
+          "Streamlined documentation process using digital tools",
+          "Organized monthly general meetings with 80% attendance",
+          "Maintained comprehensive member database",
+          "Facilitated communication between 100+ active members"
+        ]
+      },
+      {
+        id: 2,
+        title: "Member",
+        duration: "2023 - Present",
+        description: "Active participation in technical sessions, workshops, and community service projects. Contributed to various IEEE initiatives and professional development programs.",
+        achievements: [
+          "Completed IEEE professional development courses",
+          "Participated in 10+ technical workshops",
+          "Volunteered for community outreach programs",
+          "Networked with industry professionals"
+        ]
+      }
+    ]
+  },
+  {
+    id: 1,
+    name: "MoreSport",
+    logo: logo, // Using placeholder logo
+    type: "Sports Organization",
+    duration: "2023 - Present",
+    description: "University sports and recreational activities organization promoting fitness and team building",
+    positions: [
+      {
+        id: 0,
+        title: "Event Coordinator",
+        duration: "2024 - Present",
+        description: "Planned and executed sports events, tournaments, and fitness activities for university students. Managed event logistics, participant registration, and coordination with sports facilities.",
+        achievements: [
+          "Organized inter-faculty cricket tournament with 200+ participants",
+          "Coordinated weekly fitness sessions for 50+ students",
+          "Managed sports equipment inventory and maintenance",
+          "Increased student participation in sports activities by 60%"
+        ]
+      },
+      {
+        id: 1,
+        title: "Team Captain - Cricket",
+        duration: "2023 - Present",
+        description: "Led the university cricket team in inter-university competitions and practice sessions. Responsible for team strategy, player development, and maintaining team morale.",
+        achievements: [
+          "Led team to semi-finals in inter-university championship",
+          "Organized training sessions 3 times per week",
+          "Mentored 5 junior players in skill development",
+          "Maintained team fitness and performance standards"
+        ]
+      }
+    ]
+  },
+  {
+    id: 2,
+    name: "Rotaract Club",
+    logo: logo, // Using placeholder logo
+    type: "Community Service Organization",
+    duration: "2023 - Present",
+    description: "University of Moratuwa Rotaract Club - focused on community service, leadership development, and social impact",
+    positions: [
+      {
+        id: 0,
+        title: "Community Service Director",
+        duration: "2024 - Present",
+        description: "Designed and implemented community service projects focusing on education, environment, and social welfare. Coordinated with local communities and partner organizations for maximum impact.",
+        achievements: [
+          "Led educational support program for 50+ underprivileged children",
+          "Organized environmental cleanup drives in 3 local communities",
+          "Raised funds worth Rs. 100,000 for charity initiatives",
+          "Coordinated with 5+ partner NGOs for joint projects"
+        ]
+      },
+      {
+        id: 1,
+        title: "Project Member",
+        duration: "2023 - 2024",
+        description: "Actively participated in various community service projects and club activities. Contributed to planning and execution of social impact initiatives.",
+        achievements: [
+          "Participated in 15+ community service projects",
+          "Volunteered 100+ hours for social causes",
+          "Contributed to fundraising campaigns",
+          "Engaged in leadership development workshops"
+        ]
+      }
+    ]
+  }
+];
 
 // Education Section Logo's
 import mahindaLogo from './assets/education_logo/Mahinda_scl.png';
@@ -115,61 +234,6 @@ export const SkillsInfo = [
   },
 ];
 
-  // export const experiences = [
-  //   {
-  //     id: 0,
-  //     img: webverseLogo,
-  //     role: "Fullstack Developer",
-  //     company: "Webverse Digital",
-  //     date: "April 2024 - Present",
-  //     desc: "Developed dynamic and scalable web applications using the MERN stack, handling both frontend and backend development. Collaborated with cross-functional teams to build responsive UI, implement RESTful APIs, and optimize application performance in an agile environment.",
-  //     skills: [
-  //       "HTML",
-  //       "CSS",
-  //       "JavaScript",
-  //       "React JS",
-  //       "TypeScript",
-  //       "Node JS",
-  //       "Tailwind CSS",
-  //       "MongoDb",
-  //       "Redux",
-  //       " Next Js",
-  //     ],
-  //   },
-  //   {
-  //     id: 1,
-  //     img: agcLogo,
-  //     role: "Fullstack Engineer",
-  //     company: "Agumentik Group of Companies",
-  //     date: "July 2023 - March 2024",
-  //     desc: "Contributed to innovative projects as a Fullstack Engineer, leading both frontend and backend development using technologies such as HTML, CSS, JavaScript, PHP, SQL, Bootstrap, and ReactJS. Worked closely with the team to deliver responsive, high-performance web applications and improve user experience through seamless integration of various technologies.",
-  //     skills: [
-  //       "ReactJS",
-  //       "Redux",
-  //       "JavaScript",
-  //       "Tailwind CSS",
-  //       "HTML",
-  //       "CSS",
-  //       "SQL",
-  //     ],
-  //   },
-  //   {
-  //     id: 2,
-  //     img: newtonschoolLogo,
-  //     role: "Frontend Intern",
-  //     company: "Newton School",
-  //     date: "September 2021 - August 2022",
-  //     desc: "Worked as a Frontend Developer Intern, designing and implementing scalable UI components and responsive websites using HTML, CSS, JavaScript, Bootstrap, and Material UI. Collaborated with the design team to translate wireframes and prototypes from Figma into interactive, user-friendly web pages.",
-  //     skills: [
-  //       "HTML",
-  //       "CSS",
-  //       "Javascript",
-  //       "Bootstrap",
-  //       "Figma",
-  //       "Material UI",
-  //     ],
-  //   },
-  // ];
   
   export const education = [
     {
@@ -255,3 +319,30 @@ export const SkillsInfo = [
     },
 
   ];  
+
+  export const testimonials=[
+    {
+      name: "Mr. Dilan Perera",
+      pos:"Senior Software Engineer",
+      company: "WSO2",
+      profilePic: dilanPic,
+      linkedinUrl: "https://www.linkedin.com/in/indilanperera/",
+      feedback: "Minul had a good leadership in both project management and UI/UX design. His initiative, accountability, and clear understanding of his role were key in driving the team forward with minimal blockers. His leadership focused on implementation quality, and ability to guide the team collaboratively stood out and contributed significantly to the project's overall success."
+    },
+    {
+      name: "Jane Smith",
+      pos:"Project Manager",
+      company: "Digital Innovations Ltd.",
+      profilePic:reactjsLogo,
+      linkedinUrl: "https://www.linkedin.com/in/jane-smith",
+      feedback: "Working with Minul was an exceptional experience. His technical expertise in full-stack development, combined with his problem-solving skills, made him an invaluable team member. He consistently delivered high-quality code and helped mentor junior developers."
+    },
+    {
+      name: "Alice Johnson",
+      pos:"UX Designer",
+      company: "Creative Studios",
+      profilePic:reactjsLogo,
+      linkedinUrl: "https://www.linkedin.com/in/alice-johnson",
+      feedback: "Minul's attention to detail and user-centric approach to development truly impressed me. He seamlessly translated design concepts into pixel-perfect implementations while maintaining excellent performance and accessibility standards."
+    }
+  ];
