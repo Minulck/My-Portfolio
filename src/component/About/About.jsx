@@ -6,7 +6,7 @@ import profileImage from '../../assets/profile_round.png';
 const About = () => {
     return (
         <section id="about"
-        className="px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-16 md:mt-24 lg:mt-32 lg:mb-35 sm:mb-15">
+        className="px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-16 md:mt-24 lg:mt-32 lg:h-[calc(80vh-4rem)] sm:mb-15 ">
             <div className="flex flex-col-reverse md:flex-row justify-between items-center">
                 <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-8">
                     <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-white">

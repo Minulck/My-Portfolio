@@ -22,20 +22,20 @@ const Work = () => {
   // Add keyboard event listener for ESC key
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (e.key === 'Escape' && selectedProject) {
+      if (e.key === "Escape" && selectedProject) {
         handleCloseProject();
       }
     };
 
     if (selectedProject) {
-      document.addEventListener('keydown', handleKeyDown);
+      document.addEventListener("keydown", handleKeyDown);
       // Prevent background scrolling when modal is open
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     }
 
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = 'unset';
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "unset";
     };
   }, [selectedProject]);
 
@@ -68,13 +68,15 @@ const Work = () => {
                 className="w-full h-48 object-cover rounded-xl transition-transform duration-300 hover:scale-105"
                 loading="lazy"
                 onError={(e) => {
-                  e.target.style.display = 'none';
-                  e.target.nextSibling.style.display = 'flex';
+                  e.target.style.display = "none";
+                  e.target.nextSibling.style.display = "flex";
                 }}
               />
               {/* Fallback for missing images */}
               <div className="hidden w-full h-48 bg-gray-800 rounded-xl items-center justify-center">
-                <span className="text-gray-400 text-sm">Image not available</span>
+                <span className="text-gray-400 text-sm">
+                  Image not available
+                </span>
               </div>
             </div>
             <div className="p-6">
@@ -100,7 +102,7 @@ const Work = () => {
       </div>
 
       {selectedProject && (
-        <div 
+        <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 p-4"
           onClick={handleModalClick}
         >
@@ -115,7 +117,7 @@ const Work = () => {
                 &times;
               </button>
             </div>
-            
+
             {/* Modal content */}
             <div className="p-6 pt-2">
               {/* Project image */}
@@ -126,7 +128,7 @@ const Work = () => {
                   className="w-full max-w-2xl object-contain rounded-xl shadow-2xl"
                 />
               </div>
-              
+
               {/* Project details */}
               <div className="text-center">
                 <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
@@ -135,7 +137,7 @@ const Work = () => {
                 <p className="text-gray-300 text-base lg:text-lg leading-relaxed mb-6">
                   {selectedProject.description}
                 </p>
-                
+
                 {/* Tags */}
                 <div className="flex flex-wrap justify-center gap-2 mb-6">
                   {selectedProject.tags.map((tag, index) => (
@@ -147,7 +149,7 @@ const Work = () => {
                     </span>
                   ))}
                 </div>
-                
+
                 {/* Action buttons if needed */}
                 {(selectedProject.webapp || selectedProject.github) && (
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -171,7 +173,17 @@ const Work = () => {
                         View Code
                       </a>
                     )}
-                                        {selectedProject.backend && (
+                    {selectedProject.frontend && (
+                      <a
+                        href={selectedProject.frontend}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors duration-200"
+                      >
+                        Frontend Code
+                      </a>
+                    )}
+                    {selectedProject.backend && (
                       <a
                         href={selectedProject.backend}
                         target="_blank"

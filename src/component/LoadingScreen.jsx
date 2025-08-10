@@ -14,6 +14,10 @@ const LoadingScreen = ({ onComplete }) => {
     }, [onComplete]);
 
     useEffect(() => {
+        // Prevent scrolling when loading screen is active
+        document.body.style.overflow = 'hidden';
+        window.scrollTo(0, 0);
+        
         let index = 0;
         let progressValue = 0;
         
@@ -41,11 +45,13 @@ const LoadingScreen = ({ onComplete }) => {
         return () => {
             clearInterval(typingInterval);
             clearInterval(progressInterval);
+            // Restore scrolling when component unmounts
+            document.body.style.overflow = 'unset';
         };
     }, [fullText, handleComplete]);
 
     return (
-        <div className="fixed inset-0 z-50 bg-gradient-to-br from-black via-black to-purple-800 text-gray-100 flex flex-col items-center justify-center">
+        <div className="fixed inset-0 z-50 bg-gradient-to-br from-purple-900 via-gray-950 to-black text-gray-100 flex flex-col items-center justify-center">
             <div className="text-center space-y-8">
                 {/* Logo/Name with enhanced styling */}
                 <div className="mb-8">
