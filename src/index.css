@@ -8,6 +8,50 @@ html,body{
     scroll-behavior: smooth;
 }
 
+/* Custom responsive breakpoint for very small screens */
+@media (min-width: 475px) {
+  .xs\:flex-row {
+    flex-direction: row;
+  }
+}
+
+/* Mobile popup optimizations */
+@media (max-width: 640px) {
+  /* Prevent horizontal scroll on mobile */
+  .modal-content {
+    max-width: calc(100vw - 16px);
+  }
+  
+  /* Ensure touch targets are at least 44px for accessibility */
+  .modal-button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Optimize scrolling on mobile */
+  .modal-scroll {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+  
+  /* Prevent zoom on double tap for modal buttons */
+  .modal-button, .modal-close-btn {
+    touch-action: manipulation;
+  }
+  
+  /* Improve tap responsiveness */
+  .modal-content * {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Prevent body scroll when modal is open */
+.modal-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
 
 
 
