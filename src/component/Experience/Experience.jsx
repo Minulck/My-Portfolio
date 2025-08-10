@@ -29,7 +29,7 @@ const Experience = () => {
     };
 
     return (
-        <section id='experience' className='bg-[#050414] text-white py-12 sm:py-20 px-4'>
+        <section id='experience' className='text-white py-12 sm:py-20 px-4'>
             <div className="text-center mb-12 sm:mb-16">
                 <h2 className="text-2xl sm:text-4xl font-bold text-white">My Experience</h2>
                 <div className="w-24 sm:w-32 h-1 bg-[#8245ec] mx-auto mt-4"></div>
