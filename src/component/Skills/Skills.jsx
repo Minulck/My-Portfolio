@@ -34,7 +34,7 @@ const Skills = () => {
               {category.title}
             </h3>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-3 w-full">
               {category.skills.map((skill) => {
                 return (
                   <div
@@ -55,36 +55,6 @@ const Skills = () => {
             </div>
           </Tilt>
         ))}
-      </div>
-
-      <div className="mt-8">
-        <h4 className="text-xl font-semibold text-gray-400 mb-4 text-center">
-          Technologies & Tools
-        </h4>
-        <div className="slider">
-          <div className="list">
-            {/* First set of logos */}
-            {TechLogo.map((logo, index) => (
-              <div className="item" key={`first-${index}`}>
-                <img
-                  src={logo.logo}
-                  alt={logo.name}
-                  title={logo.name}
-                />
-              </div>
-            ))}
-            {/* Duplicate set for seamless loop */}
-            {TechLogo.map((logo, index) => (
-              <div className="item" key={`second-${index}`}>
-                <img
-                  src={logo.logo}
-                  alt={logo.name}
-                  title={logo.name}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );

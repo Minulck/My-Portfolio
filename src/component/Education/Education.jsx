@@ -17,7 +17,7 @@ const Education = () => {
       </div>
 
       <div className="relative">
-        <div className="absolute sm:left-1/2 left-0 transform -translate-x-1/2 sm:translate-x-0 w-1 bg-white h-full"></div>
+        <div className="absolute sm:left-1/2 left-0 transform -translate-x-1/2 sm:translate-x-0 w-1 bg-white h-full "></div>
         {education.map((edu, index) => (
           <div
             key={edu.id}
@@ -25,7 +25,7 @@ const Education = () => {
               index % 2 === 0 ? "sm:justify-start" : "sm:justify-end"
             } `}
           >
-            <div className="absolute sm:left-1/2 left-0 transform -translate-x-1/2 bg-white border-4 border-[#8245ec] w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center z-10">
+            <div className="absolute sm:left-1/2 left-0 transform -translate-x-1/2 bg-white border-4 border-[#8245ec] w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center z-10 sm:hidden 2xl:block">
               <img
                 src={edu.img}
                 alt={edu.school}
