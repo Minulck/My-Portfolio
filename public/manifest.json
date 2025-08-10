@@ -1,0 +1,26 @@
+{
+  "name": "Minul Chathumal - Full Stack Developer Portfolio",
+  "short_name": "Minul Portfolio",
+  "description": "Full Stack Developer specializing in React, Node.js, and modern web technologies",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050414",
+  "theme_color": "#8245ec",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["portfolio", "developer", "technology"],
+  "lang": "en-US"
+}
