@@ -28,6 +28,7 @@ function App() {
               <NavBar />
               <About />
               <Skills/>
+              <Work />
               <Education />
             </div>
 
