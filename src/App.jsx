@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import LoadingScreen from './component/LoadingScreen'
 import NavBar from './component/NavBar/NavBar'
@@ -14,6 +14,16 @@ import BlurBlob from './BlurBlob'
 
 function App() {
   const [isLoading, setIsLoading] = useState(false)
+
+  useEffect(() => {
+    // Force scroll to top on page load/reload
+    window.scrollTo(0, 0);
+    
+    // Prevent scroll restoration
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+  }, []);
 
   return (
     <>
