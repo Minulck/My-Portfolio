@@ -38,7 +38,7 @@ const About = () => {
                          I have a strong background in web development, with a focus on creating dynamic and responsive user interfaces. My passion for coding drives me to continuously learn and adapt to new technologies, ensuring that I stay at the forefront of the industry.
                      </p>
 
-                    <a href=""
+                    <a href="https://drive.google.com/file/d/1your-cv-file-id/view?usp=sharing"
                         target='_blank'
                         rel='noopener noreferrer'
                         className='inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105'
@@ -51,7 +51,7 @@ const About = () => {
                 </div>
                 
                 <div className="md:w-1/2 flex justify-center md:justify-end ">
-                   <Tilt className='w-64 w-48 sm:h-54 md:w-[30rem] md:h-[30rem] border-4 border-purple-700 rounded-full'
+                   <Tilt className='w-48 h-48 sm:w-54 sm:h-54 md:w-[30rem] md:h-[30rem] border-4 border-purple-700 rounded-full'
                         tiltMaxAngleX={20}
                         tiltMaxAngleY={20}
                         perspective={1000}

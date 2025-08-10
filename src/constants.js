@@ -26,6 +26,14 @@ import vercelLogo from './assets/tech_logo/vercel.png';
 import postgreLogo from './assets/tech_logo/postgre.png';
 
 
+// Education Section Logo's
+import mahindaLogo from './assets/education_logo/Mahinda_scl.png';
+import dharmalokaLogo from './assets/education_logo/Dharmaloka_scl.png';
+import uomLogo from './assets/education_logo/UOM.png';
+
+// Project Section Logo's
+import logo from "./assets/work_logo/Screenshot (2306).png"
+
 import dilanPic from './assets/Testmonials/dilan.jpeg';
 
 // Experience Section Logo's
@@ -148,13 +156,7 @@ export const experienceOrganizations = [
   }
 ];
 
-// Education Section Logo's
-import mahindaLogo from './assets/education_logo/Mahinda_scl.png';
-import dharmalokaLogo from './assets/education_logo/Dharmaloka_scl.png';
-import uomLogo from './assets/education_logo/UOM.png';
-
-// Project Section Logo's
-import logo from "./assets/work_logo/Screenshot (2306).png"
+// Education Section Logo's was moved above
 
 export const TechLogo=[
   {name: 'HTML', logo: htmlLogo},

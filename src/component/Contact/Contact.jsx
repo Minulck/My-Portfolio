@@ -19,7 +19,7 @@ const Contact = () => {
     setIsSent(true);
 
     emailJs.sendForm('service_bdmch9c', 'template_m41zaba', form.current, 'AmZJux4o5cxrrJKSS')
-      .then((result) => {
+      .then(() => {
           form.current.reset();
           toast.success("Message sent successfully!", {
             position: "top-left",

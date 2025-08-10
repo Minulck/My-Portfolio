@@ -20,6 +20,9 @@ const handleScroll = (id) => {
 
   return (
     <footer className="text-white py-8 px-[12vw] md:px-[7vw] lg:px-[20vw]">
+      {/* Separation line */}
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent mb-8"></div>
+      
       <div className="container mx-auto text-center">
         <h2 className="text-2xl font-semibold text-purple-500">
           Minul Chathumal
@@ -45,10 +48,10 @@ const handleScroll = (id) => {
 
         <div className="flex flex-wrap justify-center space-x-4 mt-6">
           {[
-            {icon: <FaFacebook size={20} />, link:"https://www.facebook.com"},
-            {icon: <FaTwitter size={20} />, link:"https://www.twitter.com"},
-            {icon: <FaInstagram size={20} />, link:"https://www.instagram.com"},
-            {icon: <FaLinkedin size={20} />, link:"https://www.linkedin.com"}
+            {icon: <FaFacebook size={20} />, link:"https://www.facebook.com/minulchathumal"},
+            {icon: <FaTwitter size={20} />, link:"https://twitter.com/minulck"},
+            {icon: <FaInstagram size={20} />, link:"https://www.instagram.com/minul_ck"},
+            {icon: <FaLinkedin size={20} />, link:"https://www.linkedin.com/in/minul-chathumal"}
           ].map((item, index) => (
             <div key={index} className="text-gray-300 hover:text-purple-500 transition-colors">
               <a href={item.link} target="_blank" rel="noopener noreferrer">
