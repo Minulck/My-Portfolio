@@ -15,9 +15,7 @@ const ScrollAnimation = ({
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setTimeout(() => {
-            setIsVisible(true);
-          }, delay);
+          setIsVisible(true);
         }
       },
       {
@@ -34,8 +32,9 @@ const ScrollAnimation = ({
       if (ref.current) {
         observer.unobserve(ref.current);
       }
+      observer.disconnect(); // Cleanup observer
     };
-  }, [delay]);
+  }, []);
 
   const getAnimationClass = () => {
     if (!isVisible) {
@@ -48,9 +47,8 @@ const ScrollAnimation = ({
         default:
           return 'opacity-0 translate-y-8';
       }
-    } else {
-      return 'opacity-100 translate-y-0 translate-x-0';
     }
+    return 'opacity-100 translate-y-0 translate-x-0';
   };
 
   // If stagger is enabled and children is an array
@@ -62,7 +60,7 @@ const ScrollAnimation = ({
             key={index}
             className={`transition-all duration-1000 ease-out ${getAnimationClass()}`}
             style={{
-              transitionDelay: isVisible ? `${index * staggerDelay}ms` : '0ms'
+              transitionDelay: `${delay + (isVisible ? index * staggerDelay : 0)}ms`
             }}
           >
             {child}
@@ -76,6 +74,7 @@ const ScrollAnimation = ({
     <div
       ref={ref}
       className={`transition-all duration-1000 ease-out ${getAnimationClass()} ${className}`}
+      style={{ transitionDelay: `${delay}ms` }}
     >
       {children}
     </div>
