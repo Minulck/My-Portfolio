@@ -8,6 +8,16 @@ const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+
+    const menuItems = [
+    { id: "about", label: "About" },
+    { id: "skills", label: "Skills" },
+    { id: "work", label: "Projects" },
+    { id: "education", label: "Education" },
+    { id: "experience", label: "Experience" },
+    { id: "contact", label: "Contact" },
+  ];
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
@@ -18,20 +28,25 @@ const NavBar = () => {
     };
   }, []);
 
-  const menuItems = [
-    { id: "about", label: "About" },
-    { id: "skills", label: "Skills" },
-    { id: "work", label: "Projects" },
-        { id: "education", label: "Education" },
-    { id: "experience", label: "Experience" },
-    { id: "contact", label: "Contact" },
-  ];
+
 
   const handleMenuItemClick = (id) => {
     setActiveSection(id);
     setIsMenuOpen(false);
-    const section = document.getElementById(id);
-    section.scrollIntoView({ behavior: "smooth" });
+    
+    if (id === "about") {
+      // Scroll to top of page for About section
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    } else {
+      // Normal scroll behavior for other sections
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
   };
 
   return (
@@ -56,11 +71,11 @@ const NavBar = () => {
           {menuItems.map((item) => (
             <li
               key={item.id}
-              className={`cursor-pointer hover:text-[#8245ec] ${
+              className={` cursor-pointer hover:text-[#8245ec] ${
                 activeSection === item.id ? "text-[#8245ec]" : ""
               }`}
             >
-              <button onClick={() => handleMenuItemClick(item.id)}>
+              <button className="cursor-pointer" onClick={() => handleMenuItemClick(item.id)}>
                 {item.label}
               </button>
             </li> 

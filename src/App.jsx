@@ -30,6 +30,7 @@ function App() {
               <Skills/>
               <Work />
               <Education />
+              <Footer/>
             </div>
 
         </div>
