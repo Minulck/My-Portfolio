@@ -25,7 +25,7 @@ const handleScroll = (id) => {
 };
 
   return (
-    <footer className="text-white py-8 px-[12vw] md:px-[7vw] lg:px-[20vw]">
+    <footer className="bg-gray-900 text-white py-8 px-[12vw] md:px-[7vw] lg:px-[20vw]">
       {/* Separation line */}
       <div className="w-full h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent mb-8"></div>
       
