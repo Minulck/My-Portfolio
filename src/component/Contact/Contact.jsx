@@ -9,6 +9,7 @@ import {toast,ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import emailJs from '@emailjs/browser'
 
+
 const Contact = () => {
 
   const form = useRef();
@@ -16,9 +17,25 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
+    
+    // Check if environment variables are loaded
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    
+    if (!serviceId || !templateId || !publicKey) {
+      toast.error("EmailJS configuration is missing. Please check environment variables.", {
+        position: "top-left",
+        autoClose: 5000,
+        closeOnClick: true,
+        theme: "dark"
+      });
+      return;
+    }
+    
     setIsSent(true);
 
-    emailJs.sendForm(VITE.EMAILJS.SERVICE_ID, VITE.EMAILJS.TEMPLATE_ID, form.current, 'AmZJux4o5cxrrJKSS')
+    emailJs.sendForm(serviceId, templateId, form.current, publicKey)
       .then(() => {
           form.current.reset();
           toast.success("Message sent successfully!", {

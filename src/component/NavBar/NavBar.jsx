@@ -22,7 +22,31 @@ const NavBar = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
+      
+      // Detect active section
+      const sections = menuItems.map(item => item.id);
+      const navbarHeight = 80;
+      
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i]);
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          const sectionTop = rect.top + window.pageYOffset - navbarHeight;
+          const sectionBottom = sectionTop + rect.height;
+          
+          if (window.pageYOffset >= sectionTop - 100 && window.pageYOffset < sectionBottom - 100) {
+            setActiveSection(sections[i]);
+            break;
+          }
+        }
+      }
+      
+      // Set About as active when at the top
+      if (window.pageYOffset < 100) {
+        setActiveSection("about");
+      }
     };
+    
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -42,10 +66,16 @@ const NavBar = () => {
         behavior: "smooth"
       });
     } else {
-      // Normal scroll behavior for other sections
+      // Normal scroll behavior for other sections with navbar offset
       const section = document.getElementById(id);
       if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
+        const navbarHeight = 80; // Approximate navbar height
+        const offsetTop = section.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+        
+        window.scrollTo({
+          top: offsetTop,
+          behavior: "smooth"
+        });
       }
     }
   };

@@ -10,10 +10,16 @@ const handleScroll = (id) => {
       behavior: "smooth"
     });
   } else {
-    // Normal scroll behavior for other sections
+    // Normal scroll behavior for other sections with navbar offset
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      const navbarHeight = 80; // Approximate navbar height
+      const offsetTop = element.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+      
+      window.scrollTo({
+        top: offsetTop,
+        behavior: "smooth"
+      });
     }
   }
 };
@@ -33,6 +39,7 @@ const handleScroll = (id) => {
             { name: "Skills", id: "skills" },
             { name: "Work", id: "work" },
             { name: "Education", id: "education" },
+            { name: "Testimonials", id: "testimonials" },
             { name: "Experience", id: "experience" },
             { name: "Contact", id: "contact" },
           ].map((item, index) => (
