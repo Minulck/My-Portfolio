@@ -6,68 +6,61 @@ const BackgroundDots = () => {
   const [constellations, setConstellations] = useState([]);
 
   useEffect(() => {
+    // Optimize for mobile: reduce stars/galaxy/constellations
+    const isMobile = window.innerWidth < 640;
+    const starCount = isMobile ? 40 : 200;
+    const galaxyCount = isMobile ? 3 : 12;
+    const constellationCount = isMobile ? 1 : 5;
     // Generate stars with different types
-    const generateStars = () => {
-      const newStars = [];
-      for (let i = 0; i < 200; i++) {
-        const starType = Math.random();
-        newStars.push({
-          id: i,
-          x: Math.random() * 100,
-          y: Math.random() * 100,
-          size: Math.random() * 3 + 0.5,
-          opacity: Math.random() * 0.8 + 0.2,
-          twinkleDelay: Math.random() * 5,
-          brightness: Math.random() * 0.8 + 0.2,
-          type: starType > 0.8 ? 'bright' : starType > 0.6 ? 'medium' : 'dim',
-          color: starType > 0.9 ? 'blue' : starType > 0.7 ? 'purple' : 'white',
-        });
-      }
-      setStars(newStars);
-    };
-
+    const newStars = [];
+    for (let i = 0; i < starCount; i++) {
+      const starType = Math.random();
+      newStars.push({
+        id: i,
+        x: Math.random() * 100,
+        y: Math.random() * 100,
+        size: Math.random() * (isMobile ? 1.5 : 3) + 0.5,
+        opacity: Math.random() * 0.6 + 0.2,
+        twinkleDelay: Math.random() * 3,
+        brightness: Math.random() * 0.6 + 0.2,
+        type: starType > 0.8 ? 'bright' : starType > 0.6 ? 'medium' : 'dim',
+        color: starType > 0.9 ? 'blue' : starType > 0.7 ? 'purple' : 'white',
+      });
+    }
+    setStars(newStars);
     // Generate enhanced galaxy elements
-    const generateGalaxyElements = () => {
-      const newElements = [];
-      for (let i = 0; i < 12; i++) {
-        newElements.push({
-          id: i,
+    const newElements = [];
+    for (let i = 0; i < galaxyCount; i++) {
+      newElements.push({
+        id: i,
+        x: Math.random() * 100,
+        y: Math.random() * 100,
+        size: Math.random() * (isMobile ? 120 : 300) + 60,
+        opacity: Math.random() * (isMobile ? 0.12 : 0.2) + 0.05,
+        rotation: Math.random() * 360,
+        rotationSpeed: Math.random() * 2 + 1,
+        color: Math.random() > 0.6 ? 'purple' : Math.random() > 0.3 ? 'blue' : 'pink',
+      });
+    }
+    setGalaxyElements(newElements);
+    // Generate constellation connections
+    const newConstellations = [];
+    for (let i = 0; i < constellationCount; i++) {
+      const points = [];
+      const numPoints = Math.floor(Math.random() * 3) + 2;
+      for (let j = 0; j < numPoints; j++) {
+        points.push({
           x: Math.random() * 100,
           y: Math.random() * 100,
-          size: Math.random() * 300 + 150,
-          opacity: Math.random() * 0.2 + 0.05,
-          rotation: Math.random() * 360,
-          rotationSpeed: Math.random() * 2 + 1,
-          color: Math.random() > 0.6 ? 'purple' : Math.random() > 0.3 ? 'blue' : 'pink',
         });
       }
-      setGalaxyElements(newElements);
-    };
-
-    // Generate constellation connections
-    const generateConstellations = () => {
-      const newConstellations = [];
-      for (let i = 0; i < 5; i++) {
-        const points = [];
-        const numPoints = Math.floor(Math.random() * 4) + 3;
-        for (let j = 0; j < numPoints; j++) {
-          points.push({
-            x: Math.random() * 100,
-            y: Math.random() * 100,
-          });
-        }
-        newConstellations.push({
-          id: i,
-          points,
-          opacity: Math.random() * 0.3 + 0.1,
-        });
-      }
-      setConstellations(newConstellations);
-    };
-
-    generateStars();
-    generateGalaxyElements();
-    generateConstellations();
+      newConstellations.push({
+        id: i,
+        points,
+        opacity: Math.random() * 0.2 + 0.1,
+      });
+    }
+    setConstellations(newConstellations);
   }, []);
 
   const getStarStyle = (star) => {

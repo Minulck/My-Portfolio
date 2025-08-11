@@ -8,42 +8,37 @@ const LoadingScreen = ({ onComplete }) => {
     const [galaxyElements, setGalaxyElements] = useState([]);
     const fullText = " < MinulCK />";
 
-    // Generate galaxy background for loading screen
+    // Optimize for mobile: reduce stars/galaxy elements and effects
     useEffect(() => {
-        const generateLoadingStars = () => {
-            const newStars = [];
-            for (let i = 0; i < 100; i++) {
-                newStars.push({
-                    id: i,
-                    x: Math.random() * 100,
-                    y: Math.random() * 100,
-                    size: Math.random() * 2 + 0.5,
-                    opacity: Math.random() * 0.8 + 0.2,
-                    delay: Math.random() * 3,
-                    type: Math.random() > 0.7 ? 'bright' : 'normal',
-                });
-            }
-            setStars(newStars);
-        };
-
-        const generateLoadingGalaxy = () => {
-            const newElements = [];
-            for (let i = 0; i < 6; i++) {
-                newElements.push({
-                    id: i,
-                    x: Math.random() * 100,
-                    y: Math.random() * 100,
-                    size: Math.random() * 200 + 100,
-                    opacity: Math.random() * 0.3 + 0.1,
-                    rotation: Math.random() * 360,
-                    color: Math.random() > 0.5 ? 'purple' : 'blue',
-                });
-            }
-            setGalaxyElements(newElements);
-        };
-
-        generateLoadingStars();
-        generateLoadingGalaxy();
+        const isMobile = window.innerWidth < 640;
+        const starCount = isMobile ? 30 : 100;
+        const galaxyCount = isMobile ? 2 : 6;
+        const newStars = [];
+        for (let i = 0; i < starCount; i++) {
+            newStars.push({
+                id: i,
+                x: Math.random() * 100,
+                y: Math.random() * 100,
+                size: Math.random() * (isMobile ? 1.5 : 2) + 0.5,
+                opacity: Math.random() * 0.6 + 0.2,
+                delay: Math.random() * 2,
+                type: Math.random() > 0.7 ? 'bright' : 'normal',
+            });
+        }
+        setStars(newStars);
+        const newElements = [];
+        for (let i = 0; i < galaxyCount; i++) {
+            newElements.push({
+                id: i,
+                x: Math.random() * 100,
+                y: Math.random() * 100,
+                size: Math.random() * (isMobile ? 120 : 200) + 80,
+                opacity: Math.random() * (isMobile ? 0.2 : 0.3) + 0.08,
+                rotation: Math.random() * 360,
+                color: Math.random() > 0.5 ? 'purple' : 'blue',
+            });
+        }
+        setGalaxyElements(newElements);
     }, []);
 
     // Optimized completion handler using useCallback
@@ -101,7 +96,7 @@ const LoadingScreen = ({ onComplete }) => {
                 {galaxyElements.map((element) => (
                     <div
                         key={`loading-galaxy-${element.id}`}
-                        className="absolute rounded-full blur-3xl galaxy-loading"
+                        className="absolute rounded-full galaxy-loading"
                         style={{
                             left: `${element.x}%`,
                             top: `${element.y}%`,
@@ -109,9 +104,10 @@ const LoadingScreen = ({ onComplete }) => {
                             height: `${element.size}px`,
                             opacity: element.opacity,
                             background: element.color === 'purple' 
-                                ? 'radial-gradient(circle, rgba(168, 85, 247, 0.4) 0%, rgba(139, 92, 246, 0.2) 50%, transparent 100%)'
-                                : 'radial-gradient(circle, rgba(59, 130, 246, 0.4) 0%, rgba(99, 102, 241, 0.2) 50%, transparent 100%)',
-                            transform: `rotate(${element.rotation}deg)`,
+                                ? 'radial-gradient(circle, rgba(168, 85, 247, 0.3) 0%, rgba(139, 92, 246, 0.15) 50%, transparent 100%)'
+                                : 'radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, rgba(99, 102, 241, 0.15) 50%, transparent 100%)',
+                            transform: `translateZ(0) rotate(${element.rotation}deg)`,
+                            willChange: 'transform, opacity',
                             animationDelay: `${element.id * 0.5}s`,
                         }}
                     />
@@ -129,11 +125,12 @@ const LoadingScreen = ({ onComplete }) => {
                             height: `${star.size}px`,
                             opacity: star.opacity,
                             background: star.type === 'bright'
-                                ? `radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(168, 85, 247, 0.6) 70%, transparent 100%)`
-                                : `radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, rgba(168, 85, 247, 0.3) 70%, transparent 100%)`,
+                                ? `radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(168, 85, 247, 0.4) 70%, transparent 100%)`
+                                : `radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, rgba(168, 85, 247, 0.2) 70%, transparent 100%)`,
                             boxShadow: star.type === 'bright' 
-                                ? `0 0 ${star.size * 4}px rgba(168, 85, 247, 0.8)`
-                                : `0 0 ${star.size * 2}px rgba(255, 255, 255, 0.4)`,
+                                ? `0 0 ${star.size * 2}px rgba(168, 85, 247, 0.5)`
+                                : `0 0 ${star.size * 1}px rgba(255, 255, 255, 0.2)`,
+                            willChange: 'transform, opacity',
                             animationDelay: `${star.delay}s`,
                         }}
                     />

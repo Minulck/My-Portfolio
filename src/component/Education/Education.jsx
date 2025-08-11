@@ -35,7 +35,7 @@ const Education = () => {
 
             <div
               className={`w-full md:max-w-[43%] lg:max-w-[41%] max-w-[300px] p-3 md:p-6 rounded-2xl shadow-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0,0.20px,1px,rgba(130,69,236,0.5)] ${
-                index % 2 === 0 ? "md:mr-auto md:ml-12" : "md:ml-auto md:mr-12"
+                index % 2 === 0 ? "md:mr-auto md:ml-12 " : "md:ml-auto md:mr-12"
               } mt-12 md:mt-0 transform transition-transform duration-500 md:hover:scale-105`}
             >
               <div className="flex items-center space-x-4 md:space-x-6">
