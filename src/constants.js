@@ -21,15 +21,15 @@ import postgreLogo from "./assets/tech_logo/postgre.svg";
 import ballerinaLogo from "./assets/tech_logo/Ballerina.svg";
 
 import reactjsLogo from "./assets/tech_logo/reactjs.png";
-import springbootLogo from "./assets/tech_logo/springboot.png";
-import tailwindcssLogo from "./assets/tech_logo/tailwindcss.png";
+import springbootLogo from "./assets/tech_logo/springboot.svg";
+import tailwindcssLogo from "./assets/tech_logo/tailwindcss.svg";
 import pythonLogo from "./assets/tech_logo/python.png";
-import vercelLogo from "./assets/tech_logo/vercel.png";
+import vercelLogo from "./assets/tech_logo/vercel.svg";
 import vscodeLogo from "./assets/tech_logo/vscode.png";
 
 // Education Section Logo's
-import mahindaLogo from "./assets/education_logo/Mahinda_scl.png";
-import dharmalokaLogo from "./assets/education_logo/Dharmaloka_scl.png";
+import mahindaLogo from "./assets/education_logo/Mahinda_scl.svg";
+import dharmalokaLogo from "./assets/education_logo/Dharmaloka_scl.svg";
 import uomLogo from "./assets/education_logo/UOM.png";
 
 // Project Section Logo's
