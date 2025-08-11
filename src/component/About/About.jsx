@@ -6,7 +6,7 @@ import profileImage from '../../assets/profile_round.png';
 const About = () => {
     return (
         <section id="about"
-        className="px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-16 md:mt-24 lg:mt-32 lg:h-[calc(80vh-4rem)] sm:mb-15 ">
+        className="px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-4 md:mt-2 lg:mt-32 lg:h-[calc(80vh-4rem)] sm:mb-15 ">
             <div className="flex flex-col-reverse md:flex-row justify-between items-center">
                 <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-8">
                     <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-white">
@@ -41,7 +41,7 @@ const About = () => {
                     <a href="https://drive.google.com/file/d/1A3uCJjTsBsT92mhynst8Dszyv2myQ4p4/view?usp=sharing"
                         target='_blank'
                         rel='noopener noreferrer'
-                        className='inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105'
+                        className='inline-block text-white py-3 px-8 rounded-full mt-1 text-lg font-bold transition duration-300 transform hover:scale-105'
                         style={{ background:'linear-gradient(90deg, #8245ec, #a855f7)',
                             boxShadow:'0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #a855f7'
                          }}
