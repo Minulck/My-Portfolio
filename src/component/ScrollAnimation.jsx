@@ -40,15 +40,15 @@ const ScrollAnimation = ({
     if (!isVisible) {
       switch (animationType) {
         case 'slideLeft':
-          return 'opacity-0 -translate-x-12';
+          return 'opacity-0 -translate-x-12 scale-95 blur-sm';
         case 'slideRight':
-          return 'opacity-0 translate-x-12';
+          return 'opacity-0 translate-x-12 scale-95 blur-sm';
         case 'fadeUp':
         default:
-          return 'opacity-0 translate-y-8';
+          return 'opacity-0 translate-y-8 scale-95 blur-sm';
       }
     }
-    return 'opacity-100 translate-y-0 translate-x-0';
+    return 'opacity-100 translate-y-0 translate-x-0 scale-100 blur-none';
   };
 
   // If stagger is enabled and children is an array
@@ -58,7 +58,7 @@ const ScrollAnimation = ({
         {children.map((child, index) => (
           <div
             key={index}
-            className={`transition-all duration-1000 ease-out ${getAnimationClass()}`}
+            className={`transition-all duration-600 ease-out will-change-transform will-change-opacity ${getAnimationClass()}`}
             style={{
               transitionDelay: `${delay + (isVisible ? index * staggerDelay : 0)}ms`
             }}
@@ -73,7 +73,7 @@ const ScrollAnimation = ({
   return (
     <div
       ref={ref}
-      className={`transition-all duration-1000 ease-out ${getAnimationClass()} ${className}`}
+      className={`transition-all duration-600 ease-out will-change-transform will-change-opacity ${getAnimationClass()} ${className}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
       {children}
