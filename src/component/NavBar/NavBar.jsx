@@ -72,12 +72,11 @@ const NavBar = () => {
       }`}
     >
       <div className="text-white py-3 sm:py-4 flex items-center justify-between md:justify-center">
-        <div className="text-sm sm:text-base md:text-lg font-semibold cursor-pointer mr-auto md:mr-0">
-          <span className="text-[#8245ec">&lt;</span>
-          <span className="text-white">Minul</span>
+        <div className="text-sm sm:text-base md:text-lg font-semibold cursor-pointer mr-auto md:mr-5">
+          <span className="text-[#8245ec]">&lt;</span>
+          <span className="text-white">MinulCK</span>
           <span className="text-[#8245ec]">/</span>
-          <span className="text-white">Chathumal</span>
-          <span className="text-[#8245ec">&gt;</span>
+          <span className="text-[#8245ec]">&gt;</span>
         </div>
 
         {/* Desktop Menu and Social Icons */}
