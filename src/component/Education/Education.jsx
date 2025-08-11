@@ -25,7 +25,7 @@ const Education = () => {
               index % 2 === 0 ? "md:justify-start" : "md:justify-end"
             }`}
           >
-            <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 bg-white border-4 border-[#8245ec] w-12 h-12 md:w-12 md:h-12 lg:w-12 lg:h-12 2xl:w-16 2xl:h-16 rounded-full flex items-center justify-center z-10">
+            <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 bg-white border-4 border-[#8245ec] w-12 h-12 md:w-12 md:h-12 lg:w-14 lg:h-14 2xl:w-16 2xl:h-16 rounded-full flex items-center justify-center z-10">
               <img
                 src={edu.img}
                 alt={edu.school}
@@ -34,7 +34,7 @@ const Education = () => {
             </div>
 
             <div
-              className={`w-full md:max-w-[43%] max-w-[300px] p-3 md:p-6 rounded-2xl shadow-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0,0.20px,1px,rgba(130,69,236,0.5)] ${
+              className={`w-full md:max-w-[43%] lg:max-w-[41%] max-w-[300px] p-3 md:p-6 rounded-2xl shadow-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0,0.20px,1px,rgba(130,69,236,0.5)] ${
                 index % 2 === 0 ? "md:mr-auto md:ml-12" : "md:ml-auto md:mr-12"
               } mt-12 md:mt-0 transform transition-transform duration-500 md:hover:scale-105`}
             >
