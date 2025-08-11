@@ -6,7 +6,7 @@ const LoadingScreen = ({ onComplete }) => {
     const [progress, setProgress] = useState(0);
     const [stars, setStars] = useState([]);
     const [galaxyElements, setGalaxyElements] = useState([]);
-    const fullText = " < MinulCK /> ";
+    const fullText = " < MinulCK />";
 
     // Generate galaxy background for loading screen
     useEffect(() => {
@@ -154,7 +154,7 @@ const LoadingScreen = ({ onComplete }) => {
                 <div className="mb-8">
                     <div className="text-4xl md:text-5xl font-mono font-bold bg-gradient-to-r from-[#8245ec] via-[#a855f7] to-[#3b82f6] bg-clip-text text-transparent filter drop-shadow-lg">
                         {text}
-                        <span className="animate-blink ml-1 text-white drop-shadow-[0_0_10px_rgba(168,85,247,0.8)]"> | </span>
+                        <span className="animate-blink ml-1 text-white drop-shadow-[0_0_10px_rgba(168,85,247,0.8)]">|</span>
                     </div>
                     <div className="text-sm text-gray-300 mt-2 font-light tracking-wider">
                         Full Stack Developer
@@ -184,21 +184,6 @@ const LoadingScreen = ({ onComplete }) => {
                     </div>
                 </div>
 
-                {/* Enhanced loading animation with galaxy elements */}
-                <div className="flex space-x-3 justify-center items-center">
-                    <div className="relative">
-                        <div className="w-3 h-3 bg-[#8245ec] rounded-full animate-bounce shadow-[0_0_10px_#8245ec]"></div>
-                        <div className="absolute inset-0 w-3 h-3 bg-[#8245ec] rounded-full animate-ping opacity-30"></div>
-                    </div>
-                    <div className="relative" style={{ animationDelay: '0.1s' }}>
-                        <div className="w-3 h-3 bg-[#a855f7] rounded-full animate-bounce shadow-[0_0_10px_#a855f7]"></div>
-                        <div className="absolute inset-0 w-3 h-3 bg-[#a855f7] rounded-full animate-ping opacity-30"></div>
-                    </div>
-                    <div className="relative" style={{ animationDelay: '0.2s' }}>
-                        <div className="w-3 h-3 bg-[#3b82f6] rounded-full animate-bounce shadow-[0_0_10px_#3b82f6]"></div>
-                        <div className="absolute inset-0 w-3 h-3 bg-[#3b82f6] rounded-full animate-ping opacity-30"></div>
-                    </div>
-                </div>
 
                 {/* Galaxy formation effect */}
                 <div className="flex justify-center mt-8">
