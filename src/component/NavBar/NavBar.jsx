@@ -103,7 +103,7 @@ const NavBar = () => {
               <FaGithub size={20} sm:size={24} />
             </a>
             <a
-              href="https://www.linkedin.com/in/minul-chathumal-b2784725b/"
+              href="https://lk.linkedin.com/in/minul-chathumal-b2784725b"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-[#8245ec] transition-colors"
