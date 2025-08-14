@@ -488,7 +488,7 @@ export const projects = [
     id: 5,
     title: "Ceylon-Coffee",
     description:
-      "A productivity-boosting Chrome extension designed to help users manage and remember their daily tasks. Built using JavaScript, it offers a simple interface with reminders and task notifications to keep users on track.",
+      "Ceylon-Coffee is a coffee shop-themed web project built with HTML, CSS, JavaScript, and Bootstrap. It showcases interactive features like navigation bars and forms, helping you learn and practice essential web development skills.",
     image: ceyloanCoffee,
     tags: ["JavaScript", "PHP", "HTML", "CSS"],
     github: "https://github.com/th33k/Ceylon-Coffee",
