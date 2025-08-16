@@ -41,7 +41,7 @@ import portfolio from "./assets/work_logo/portfolio.png";
 import email from "./assets/work_logo/email.png";
 
 import dilanPic from "./assets/Testmonials/dilan.jpeg";
-import shayanPic from "./assets/Testmonials/shayan.jpeg";
+import shashikaPic from "./assets/Testmonials/Ms.shashika.jpg";
 
 // Experience Section Logo's
 import rotaLogo from "./assets/company_logo/rota.png";
@@ -512,19 +512,16 @@ It was a pleasure working with him, and I’m confident he will continue to achi
 `,
   },
 
-//     {
-//     name: "Mr. Shayan Malinda",
-//     pos: "Senior Software Engineer",
-//     company: "WSO2",
-//     profilePic: shayanPic,
-//     linkedinUrl: "https://www.linkedin.com/in/shayanmalinda/?originalSubdomain=lk",
-//     feedback:`
-// I had the pleasure of mentoring Minul during his undergraduate project. He showed great leadership, guided his team well, and kept everyone motivated. He demonstrated adaptability by learning a new language to meet project needs. He was committed and consistently delivered high-quality work on time.
-
-// Minul’s communication skills were excellent clear, proactive, and collaborative. He handled challenges calmly and kept the project moving forward.
-
-// It was a pleasure working with him, and I’m confident he will continue to achieve great things.
-// `,
-//   },
+    {
+    name: "Ms.Sashika Kumarasinghe ",
+    pos: "PhD Student| Former Lecturer",
+    company: "University of Moratuwa",
+    profilePic: shashikaPic,
+    linkedinUrl: "https://www.linkedin.com/in/sashikakumarasinghe/",
+    feedback:`It has been a real pleasure to supervise and teach Minul during his undergraduate degree. From the very beginning, he showed strong technical skills in programming, problem-solving, and software development, and continued to refine them impressively over time. He has a natural ability to take on complex challenges and approach them with creativity and confidence.
+Beyond his technical skills, he is also a thoughtful leader who brings people together and helps teams work at their best. He communicates clearly, listen well, and can connect with people from very different backgrounds, which makes them an excellent collaborator. His positive attitude, willingness to support others, and genuine curiosity made him a standout student to work with.
+I believe Minul will go far in his journey. The mix of technical expertise, leadership, and strong interpersonal skills will serve him well in any path he choose, and I’m proud to have been part of his learning experience.
+`,
+  },
 
 ];
