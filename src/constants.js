@@ -389,24 +389,6 @@ export const SkillsInfo = [
 
 export const education = [
   {
-    id: 2,
-    img: mahindaLogo,
-    school: "Mahinda Maha Vidyalaya, Heiyanthuduwa",
-    date: "2007 - 2017",
-    grade: "Pass",
-    desc: " I completed my Ordinary Level (O/L) education at Mahinda Maha Vidyalaya, Heiyanthuduwa, where I studied a diverse range of subjects. My O/L results reflect my dedication and hard work, achieving grades that demonstrate my understanding and proficiency in the subjects. This foundational education has equipped me with essential skills and knowledge for my future academic pursuits.",
-    degree: "Ordinary Level (O/L)",
-  },
-  {
-    id: 1,
-    img: dharmalokaLogo,
-    school: "Sri Dharmaloka College, Kelaniya",
-    date: "2018 - 2020",
-    grade: "A A B",
-    desc: " I completed my Advanced Level (A/L) education at Sri Dharmaloka College, Kelaniya, where I specialized in Mathematics, Physics, and Chemistry. This program provided me with a solid foundation in scientific principles and analytical thinking. I excelled in my subjects, achieving high grades that reflect my dedication and understanding of the material. My A/L education has equipped me with the skills necessary for further studies in engineering and technology.",
-    degree: "A/L in Mathematics, Physics, and Chemistry",
-  },
-  {
     id: 0,
     img: uomLogo,
     school: "University of Moratuwa, Sri Lanka",
@@ -415,7 +397,25 @@ export const education = [
     desc: "Currently following BSC Honors in Information Technology at University of Moratuwa, Sri Lanka. The program is designed to provide a comprehensive understanding of information technology, including software development, data management, and system design. Through a combination of theoretical knowledge and practical experience, I am developing the skills necessary to excel in the IT industry.",
     degree: "Bsc. (Hons) in Information Technology",
   },
+    {
+    id: 1,
+    img: dharmalokaLogo,
+    school: "Sri Dharmaloka College, Kelaniya",
+    date: "2018 - 2020",
+    grade: "A A B",
+    desc: " I completed my Advanced Level (A/L) education at Sri Dharmaloka College, Kelaniya, where I specialized in Mathematics, Physics, and Chemistry. This program provided me with a solid foundation in scientific principles and analytical thinking. I excelled in my subjects, achieving high grades that reflect my dedication and understanding of the material. My A/L education has equipped me with the skills necessary for further studies in engineering and technology.",
+    degree: "A/L in Mathematics, Physics, and Chemistry",
+  },{
+    id: 2,
+    img: mahindaLogo,
+    school: "Mahinda Maha Vidyalaya, Heiyanthuduwa",
+    date: "2007 - 2017",
+    grade: "Pass",
+    desc: " I completed my Ordinary Level (O/L) education at Mahinda Maha Vidyalaya, Heiyanthuduwa, where I studied a diverse range of subjects. My O/L results reflect my dedication and hard work, achieving grades that demonstrate my understanding and proficiency in the subjects. This foundational education has equipped me with essential skills and knowledge for my future academic pursuits.",
+    degree: "Ordinary Level (O/L)",
+  },
 ];
+
 export const projects = [
   {
     id: 0,
