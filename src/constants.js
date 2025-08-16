@@ -389,7 +389,7 @@ export const SkillsInfo = [
 
 export const education = [
   {
-    id: 0,
+    id: 2,
     img: mahindaLogo,
     school: "Mahinda Maha Vidyalaya, Heiyanthuduwa",
     date: "2007 - 2017",
@@ -407,7 +407,7 @@ export const education = [
     degree: "A/L in Mathematics, Physics, and Chemistry",
   },
   {
-    id: 2,
+    id: 0,
     img: uomLogo,
     school: "University of Moratuwa, Sri Lanka",
     date: "2023 - Present",
