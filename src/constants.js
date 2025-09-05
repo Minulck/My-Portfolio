@@ -397,7 +397,7 @@ export const education = [
     desc: "Currently following BSC Honors in Information Technology at University of Moratuwa, Sri Lanka. The program is designed to provide a comprehensive understanding of information technology, including software development, data management, and system design. Through a combination of theoretical knowledge and practical experience, I am developing the skills necessary to excel in the IT industry.",
     degree: "Bsc. (Hons) in Information Technology",
   },
-    {
+  {
     id: 1,
     img: dharmalokaLogo,
     school: "Sri Dharmaloka College, Kelaniya",
@@ -405,7 +405,8 @@ export const education = [
     grade: "A A B",
     desc: " I completed my Advanced Level (A/L) education at Sri Dharmaloka College, Kelaniya, where I specialized in Mathematics, Physics, and Chemistry. This program provided me with a solid foundation in scientific principles and analytical thinking. I excelled in my subjects, achieving high grades that reflect my dedication and understanding of the material. My A/L education has equipped me with the skills necessary for further studies in engineering and technology.",
     degree: "A/L in Mathematics, Physics, and Chemistry",
-  },{
+  },
+  {
     id: 2,
     img: mahindaLogo,
     school: "Mahinda Maha Vidyalaya, Heiyanthuduwa",
@@ -453,7 +454,7 @@ export const projects = [
     description:
       "LUIGI is a smart, AI-powered robotic pet designed for fun, companionship, and emotional interaction!  It can express emotions , respond to touch , recognize gestures , play interactive games , and follow voice commands. More than just a toy, LUIGI is a digital buddy that makes your workspace lively and engaging!",
     image: luigi,
-    tags: ["python", "Tikinter", "Raspberry Pi", "Esp32"],
+    tags: ["Python", "Tkinter", "Raspberry Pi", "ESP32"],
     github: "https://github.com/th33k/Luigi",
   },
   {
@@ -473,19 +474,32 @@ export const projects = [
   {
     id: 4,
     title: "Portfolio",
-    description:"A modern, responsive portfolio website built with React and Vite, showcasing my professional journey, skills, and projects. Features a sleek dark theme with smooth animations and interactive elements.",
+    description:
+      "A modern, responsive portfolio website built with React and Vite, showcasing my professional journey, skills, and projects. Features a sleek dark theme with smooth animations and interactive elements.",
     image: portfolio,
-    tags: [
-      "HTML",
-      "Tailwind CSS",
-      "JavaScript",
-      "React JS",
-    ],
+    tags: ["HTML", "Tailwind CSS", "JavaScript", "React JS"],
     github: "https://github.com/Minulck/My-Portfolio",
-    webapp: "https://resourcehub-fivestackdev.vercel.app/",
+    webapp: "https://minulck-portfolio.vercel.app/",
   },
   {
     id: 5,
+    title: "Ally Interview Assistant",
+    description:
+      "Ally Interview Assistant is an AI-driven web application for interview preparation, offering interactive practice sessions, feedback, and analytics. Built with Next.js, TypeScript, React, Tailwind CSS, Firebase, and Vapi.",
+    // image: portfolio,
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "React JS",
+      "Tailwind CSS",
+      "Firebase",
+      "Vapi",
+    ],
+    github: "https://github.com/LuminoVate/Ally-interview-assistant",
+    // webapp: "https://ally-interview-assistant.vercel.app/",
+  },
+  {
+    id: 6,
     title: "Ceylon-Coffee",
     description:
       "Ceylon-Coffee is a coffee shop-themed web project built with HTML, CSS, JavaScript, and Bootstrap. It showcases interactive features like navigation bars and forms, helping you learn and practice essential web development skills.",
@@ -503,7 +517,7 @@ export const testimonials = [
     company: "WSO2",
     profilePic: dilanPic,
     linkedinUrl: "https://www.linkedin.com/in/indilanperera/",
-    feedback:`
+    feedback: `
 I had the pleasure of mentoring Minul during his undergraduate project. He showed great leadership, guided his team well, and kept everyone motivated. He demonstrated adaptability by learning a new language to meet project needs. He was committed and consistently delivered high-quality work on time.
 
 Minul’s communication skills were excellent clear, proactive, and collaborative. He handled challenges calmly and kept the project moving forward.
@@ -512,16 +526,15 @@ It was a pleasure working with him, and I’m confident he will continue to achi
 `,
   },
 
-    {
+  {
     name: "Ms.Sashika Kumarasinghe ",
     pos: "PhD Student| Former Lecturer",
     company: "University of Moratuwa",
     profilePic: shashikaPic,
     linkedinUrl: "https://www.linkedin.com/in/sashikakumarasinghe/",
-    feedback:`It has been a real pleasure to supervise and teach Minul during his undergraduate degree. From the very beginning, he showed strong technical skills in programming, problem-solving, and software development, and continued to refine them impressively over time. He has a natural ability to take on complex challenges and approach them with creativity and confidence.
+    feedback: `It has been a real pleasure to supervise and teach Minul during his undergraduate degree. From the very beginning, he showed strong technical skills in programming, problem-solving, and software development, and continued to refine them impressively over time. He has a natural ability to take on complex challenges and approach them with creativity and confidence.
 Beyond his technical skills, he is also a thoughtful leader who brings people together and helps teams work at their best. He communicates clearly, listen well, and can connect with people from very different backgrounds, which makes them an excellent collaborator. His positive attitude, willingness to support others, and genuine curiosity made him a standout student to work with.
 I believe Minul will go far in his journey. The mix of technical expertise, leadership, and strong interpersonal skills will serve him well in any path he choose, and I’m proud to have been part of his learning experience.
 `,
   },
-
 ];
