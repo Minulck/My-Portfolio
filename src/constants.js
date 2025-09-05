@@ -39,6 +39,7 @@ import resourcehub from "./assets/work_logo/resourcehub.png";
 import luigi from "./assets/work_logo/luigi.png";
 import portfolio from "./assets/work_logo/portfolio.png";
 import email from "./assets/work_logo/email.png";
+import ally from "./assets/work_logo/ally.png";
 
 import dilanPic from "./assets/Testmonials/dilan.jpeg";
 import shashikaPic from "./assets/Testmonials/Ms.shashika.jpg";
@@ -486,7 +487,7 @@ export const projects = [
     title: "Ally Interview Assistant",
     description:
       "Ally Interview Assistant is an AI-driven web application for interview preparation, offering interactive practice sessions, feedback, and analytics. Built with Next.js, TypeScript, React, Tailwind CSS, Firebase, and Vapi.",
-    // image: portfolio,
+    image: ally,
     tags: [
       "Next.js",
       "TypeScript",
